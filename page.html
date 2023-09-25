@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="page2.css">
+    <title>Task Manager</title>
+</head>
+<body>
+    <div class="task-manager">
+        <h1>Task Manager</h1>
+        <div class="task-form">
+            <input type="text" id="task" placeholder="Add a new task">
+            <button onclick="addTask()">Add Task</button>
+        </div>
+        <ul id="task-list">
+            <!-- Tasks will be displayed here -->
+        </ul>
+    </div>
+    <!-- Add two separate task lists for "Vacation Tasks" and "Study Tasks" -->
+<div class="task-manager">
+    <div class="task-form">
+        <!-- Add a dropdown to select the task category -->
+        <input type="text" id="task" placeholder="Add a new task">
+        <input type="date" id="task-date">
+        <input type="time" id="task-time">
+        <select id="task-category">
+            <option value="vacation">Vacation</option>
+            <option value="study">Study</option>
+        </select>
+        <button onclick="addTask()">Add Task</button>
+    </div>
+    <div class="task-options">
+        <label for="sort-select">Sort by:</label>
+        <select id="sort-select" onchange="sortTasks()">
+            <option value="default">Default</option>
+            <option value="date">Date</option>
+            <option value="priority">Priority</option>
+        </select>
+    </div>
+    <div class="task-columns">
+        <div class="task-column" id="vacation-tasks">
+            <h2>Vacation Tasks</h2>
+            <ul>
+                <!-- Vacation tasks will be displayed here -->
+            </ul>
+        </div>
+        <div class="task-column" id="study-tasks">
+            <h2>Study Tasks</h2>
+            <ul>
+                <!-- Study tasks will be displayed here -->
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <script src="page3.js"></script>
+    <!-- Include the script for the notifications -->
+
+</body>
+</html>
+
